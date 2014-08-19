@@ -1,19 +1,16 @@
 {
   "name": "ember-cli-csssplit",
   "description": "csssplitter for ember-cli",
-  "version": "0.0.5",
+  "version": "0.0.1",
   "author": "Andrew Boekhoff <aboekhoff@gmail.com>",
   "main": "index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aboekhoff/broccoli-css"
+    "url": "https://github.com/aboekhoff/ember-cli-csss"
   },
   "keywords": [
-    "IE",
-    "ember-cli-addon",
-    "css",
-    "javascript"
+    "ember-addon"
   ],
   "dependencies": {
     "broccoli-csssplit": "^0.0.6"
