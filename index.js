@@ -23,12 +23,10 @@ EmberCLICSSS.prototype.treeFor = function treeFor() {
 };
 
 EmberCLICSSS.prototype.included = function included(app) {
-  var registry = app.registry;
-  this.app = app;
-
-  var plugin = new CSSSPlugin(this.app.options.csssOptions);
-
-  registry.add('css', plugin);
 };
+
+EmberCLICSSS.prototype.postprocessTree = function(type, tree) {
+  return csss(tree, this.options);
+}
 
 module.exports = EmberCLICSSS;
