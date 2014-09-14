@@ -1,12 +1,22 @@
-# Split Your CSS With Broccoli
+# Ember CLI CSS Split
 
-Pass your tree to broccoli-csssplit and it will split any
-file (eg. foo.css) with more than 4095 selectors into separate files.
+Splits all `*.css` files with more than 4095 selectors into separate files.
 
-If CSSS continues to run when no CSS files have changed, select specific files using a glob pattern:
+If CSSS tree continues to run via `ember serve`, yet no CSS files have changed:
+
+```
+file changed adapters/application.js
+
+Build successful - 3944ms.
+
+Slowest Trees                  | Total
+-------------------------------+----------------
+CSSS                            | 1214ms
+```
+
+Select specific files using a glob pattern in your ember `Brocfile.js`:
 
 ```js
-// Brocfile.js
 var app = new EmberApp({
   csssplit: {
     files: ['myapp.css', 'themes/*.css']
