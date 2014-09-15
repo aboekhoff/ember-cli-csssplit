@@ -16,6 +16,7 @@
     "before": "broccoli-asset-rev"
   },
   "dependencies": {
-    "broccoli-csssplit": "^0.0.8"
+    "broccoli-csssplit": "^0.0.8",
+    "broccoli-static-compiler": "^0.1.4"
   }
 }
