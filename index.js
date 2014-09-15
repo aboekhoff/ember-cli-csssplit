@@ -2,6 +2,7 @@
 
 var csss  = require('broccoli-csssplit');
 var pickFiles  = require('broccoli-static-compiler');
+var mergeTrees  = require('broccoli-merge-trees');
 
 function EmberCLICSSS(project) {
   if (!(this instanceof EmberCLICSSS)) { return new EmberCLICSSS(project); }
@@ -23,7 +24,7 @@ EmberCLICSSS.prototype.postprocessTree = function(type, tree) {
     destDir: '/assets'
   });
 
-  return csss(styles, this.options);
+  return mergeTrees([tree, csss(styles, this.options)], { overwrite: true });
 };
 
 module.exports = EmberCLICSSS;
