@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-csssplit",
   "description": "csssplitter for ember-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Andrew Boekhoff <aboekhoff@gmail.com>",
   "main": "index.js",
   "license": "MIT",
