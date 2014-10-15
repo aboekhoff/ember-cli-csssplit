@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "broccoli-csssplit": "^0.0.10",
-    "broccoli-merge-trees": "^0.1.4",
+    "broccoli-merge-trees": "^0.2.0",
     "broccoli-static-compiler": "^0.1.4"
   }
 }
