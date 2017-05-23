@@ -18,13 +18,17 @@ EmberCLICSSS.prototype.included = function included(app) {
 EmberCLICSSS.prototype.postprocessTree = function(type, tree) {
   var files = this.options.files || ['**/*.css'];
 
-  var styles = pickFiles(tree, {
-    srcDir: '/assets',
-    files: files,
-    destDir: '/assets'
-  });
+  if(type == 'css'){
+    var styles = pickFiles(tree, {
+        srcDir: '/assets',
+        files: files,
+        destDir: '/assets'
+    });
 
-  return mergeTrees([tree, csss(styles, this.options)], { overwrite: true });
+    return mergeTrees([tree, csss(styles, this.options)], { overwrite: true });
+  }else{
+    return tree;
+  }
 };
 
 module.exports = EmberCLICSSS;
